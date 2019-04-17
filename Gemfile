@@ -77,6 +77,7 @@ end
 gem 'jwt'
 
 
+  gem 'pg', '0.19.0'
 
 group:development do
   gem 'sqlite3', '~> 1.3.6'
