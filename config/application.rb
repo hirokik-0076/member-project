@@ -1,4 +1,9 @@
-config.assets.initialize_on_precompile = false
+class Application < Rails::Application
+  #config.assets.initialize_on_precompile = false
+  #config.web_console.development_only = false
+end
+
+
 require_relative 'boot'
 
 require 'rails/all'
