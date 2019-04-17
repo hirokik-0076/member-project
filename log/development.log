@@ -5461,3 +5461,39 @@ ActionView::Template::Error (undefined method `name' for #<User:0x00007fd685ee14
   
 app/views/users/new.html.erb:7:in `block in _app_views_users_new_html_erb__2868928625504607435_70279673372620'
 app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb__2868928625504607435_70279673372620'
+Started GET "/" for ::1 at 2019-04-17 14:53:27 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FirebaseController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/member_skill/home
+Completed 302 Found in 34ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/member_skill/home" for ::1 at 2019-04-17 14:53:28 +0900
+Processing by MemberSkillController#home as HTML
+  Rendering member_skill/home.html.erb within layouts/application
+  Rendered member_skill/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 500ms (Views: 495.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-04-17 14:53:32 +0900
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 200 OK in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2019-04-17 14:53:32 +0900
+Processing by FirebaseController#new as HTML
+  Rendering firebase/new.html.erb within layouts/application
+  Rendered firebase/new.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
