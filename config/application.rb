@@ -1,7 +1,7 @@
-class Application < Rails::Application
+#class Application < Rails::Application
   #config.assets.initialize_on_precompile = false
   #config.web_console.development_only = false
-end
+#end
 
 
 require_relative 'boot'

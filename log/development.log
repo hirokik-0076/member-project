@@ -5497,3 +5497,13 @@ Processing by FirebaseController#new as HTML
 Completed 200 OK in 86ms (Views: 79.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for ::1 at 2019-04-17 15:43:18 +0900
+Processing by FirebaseController#new as HTML
+  Rendering firebase/new.html.erb within layouts/application
+  Rendered firebase/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 110.3ms | ActiveRecord: 0.0ms)
+
+
