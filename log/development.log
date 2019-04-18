@@ -5599,3 +5599,22 @@ Processing by FirebaseController#new as HTML
 Completed 200 OK in 115ms (Views: 107.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/signup" for ::1 at 2019-04-17 18:32:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (167.2ms)
+Completed 500 Internal Server Error in 424ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x00007fc263720a10>):
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= f.label :name %>
+    7:       <%= f.text_field :name %>
+    8: 
+    9:       <%= f.label :email %>
+   10:       <%= f.email_field :email %>
+  
+app/views/users/new.html.erb:7:in `block in _app_views_users_new_html_erb__3469105484332104797_70236434439720'
+app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb__3469105484332104797_70236434439720'
