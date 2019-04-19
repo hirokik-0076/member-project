@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  post '/project_new', to: 'projects#create'
-  get '/project_new',  to: 'projects#new'
-  get '/projects/:id',  to: 'projects#show'
-
-  post '/member_new', to: 'members#create'
-  get '/member_new',  to: 'members#new'
-  get '/members/:id',  to: 'members#show'
-
-  get 'users/new'
-
   get '/signup', to: 'users#new'
 
   get 'member_skill/home'
