@@ -6210,3 +6210,234 @@ Processing by MembersController#new as HTML
 Completed 200 OK in 553ms (Views: 530.7ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2019-04-22 12:31:42 +0900
+Processing by FirebaseController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/member_skill/home
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/member_skill/home" for ::1 at 2019-04-22 12:31:53 +0900
+Processing by MemberSkillController#home as HTML
+  Rendering member_skill/home.html.erb within layouts/application
+  Rendered member_skill/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 3468ms (Views: 3465.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for ::1 at 2019-04-22 12:31:59 +0900
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ProjectsController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/member_skill/home" for ::1 at 2019-04-22 12:32:00 +0900
+Processing by MemberSkillController#home as HTML
+  Rendering member_skill/home.html.erb within layouts/application
+  Rendered member_skill/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 126ms (Views: 122.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/member_skill/home" for ::1 at 2019-04-22 12:32:00 +0900
+Processing by MemberSkillController#home as HTML
+Started GET "/member_skill/home" for ::1 at 2019-04-22 12:32:00 +0900
+Processing by MemberSkillController#home as HTML
+  Rendering member_skill/home.html.erb within layouts/application
+  Rendered member_skill/home.html.erb within layouts/application (0.7ms)
+  Rendering member_skill/home.html.erb within layouts/application
+  Rendered member_skill/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 256ms (Views: 250.1ms | ActiveRecord: 0.2ms)
+
+
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 268ms (Views: 261.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/members" for ::1 at 2019-04-22 12:32:01 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  Rendered members/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>All members</h1>
+    2: 
+    3: <ul class="members">
+    4:   <% @members.each do |member| %>
+    5:     <li>
+    6:       <%= gravatar_for member, size: 50 %>
+    7:       <%= link_to member.name, member %>
+  
+app/views/members/index.html.erb:4:in `_app_views_members_index_html_erb__798692583015126550_70196691063560'
+Started GET "/members" for ::1 at 2019-04-22 12:32:27 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered members/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 1)):
+    3: <ul class="members">
+    4:   <% @members.each do |member| %>
+    5:     <li>
+    6:       <%= gravatar_for member, size: 50 %>
+    7:       <%= link_to member.name, member %>
+    8:     </li>
+    9:   <% end %>
+  
+app/helpers/users_helper.rb:3:in `gravatar_for'
+app/views/members/index.html.erb:6:in `block in _app_views_members_index_html_erb__798692583015126550_70196692153880'
+app/views/members/index.html.erb:4:in `_app_views_members_index_html_erb__798692583015126550_70196692153880'
+Started GET "/members" for ::1 at 2019-04-22 12:32:37 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered members/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/members/1" for ::1 at 2019-04-22 12:32:42 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 72.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/members" for ::1 at 2019-04-22 12:32:43 +0900
+Processing by MembersController#index as HTML
+  Rendering members/index.html.erb within layouts/application
+  [1m[36mMember Load (0.5ms)[0m  [1m[34mSELECT "members".* FROM "members"[0m
+  Rendered members/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 72.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/members/1" for ::1 at 2019-04-22 12:32:48 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 91ms (Views: 70.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/members/5" for ::1 at 2019-04-22 12:33:02 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMember Load (1.1ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (53.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 122.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/members/4" for ::1 at 2019-04-22 12:33:06 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 76ms (Views: 70.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/members/3" for ::1 at 2019-04-22 12:33:09 +0900
+Processing by MembersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMember Load (0.4ms)[0m  [1m[34mSELECT  "members".* FROM "members" WHERE "members"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering members/show.html.erb within layouts/application
+  Rendered members/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT ?[0m  [["uid", "OrpvMei6aBMUZInRBDgJ0lrZVwY2"], ["LIMIT", 1]]
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 66.7ms | ActiveRecord: 0.6ms)
+
+
