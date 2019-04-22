@@ -240,22 +240,9 @@ input {
     }
 }
 
-/* members index */
+/* members,project index */
 
-.members {
-    list-style: none;
-    margin: 0;
-
-    li {
-        overflow: auto;
-        padding: 10px 0;
-        border-bottom: 1px solid $gray-lighter;
-    }
-}
-
-/* projects index */
-
-.projects {
+.index_style {
     list-style: none;
     margin: 0;
 
