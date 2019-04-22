@@ -118,7 +118,7 @@ footer {
 /* sidebar */
 
 aside {
-    section.user_info {
+    section.member_info {
         margin-top: 20px;
     }
 
@@ -169,7 +169,7 @@ aside {
 /* sidebar */
 
 aside {
-    section.user_info {
+    section.member_info {
         margin-top: 20px;
     }
 
@@ -237,5 +237,31 @@ input {
 
     .form-control {
         color: $state-danger-text;
+    }
+}
+
+/* members index */
+
+.members {
+    list-style: none;
+    margin: 0;
+
+    li {
+        overflow: auto;
+        padding: 10px 0;
+        border-bottom: 1px solid $gray-lighter;
+    }
+}
+
+/* projects index */
+
+.projects {
+    list-style: none;
+    margin: 0;
+
+    li {
+        overflow: auto;
+        padding: 10px 0;
+        border-bottom: 1px solid $gray-lighter;
     }
 }
