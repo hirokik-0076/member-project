@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  post '/signup', to: 'members#create'
-  get '/signup',  to: 'members#new'
-  get '/members/:id',  to: 'members#show'
-
-  get 'users/new'
-
   get '/signup', to: 'users#new'
 
   get 'member_skill/home'
@@ -19,5 +13,7 @@ Rails.application.routes.draw do
   delete '/accounts', to: 'accounts#destroy'
 
   resources :members
+  resources :users
+  resources :projects
 
 end
