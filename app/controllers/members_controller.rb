@@ -17,6 +17,10 @@ class MembersController < ApplicationController
     end
   end
 
+  def index
+    @members = Member.all 
+  end
+
   private
 
     def member_params

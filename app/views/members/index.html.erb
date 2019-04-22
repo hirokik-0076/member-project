@@ -1,0 +1,9 @@
+<h1>All Members</h1>
+
+<ul class="index">
+  <% @members.each do |member| %>
+    <li>
+      <%= link_to member.name, member %>
+    </li>
+  <% end %>
+</ul>

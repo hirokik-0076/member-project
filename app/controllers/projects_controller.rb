@@ -17,6 +17,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def index
+    @projects = Project.all 
+  end
+
   private
     def project_params
       params.require(:project).permit(:name, :content, :skill,:status,:member)
