@@ -239,9 +239,23 @@ input {
         color: $state-danger-text;
     }
 }
+
 /* members index */
 
 .members {
+    list-style: none;
+    margin: 0;
+
+    li {
+        overflow: auto;
+        padding: 10px 0;
+        border-bottom: 1px solid $gray-lighter;
+    }
+}
+
+/* projects index */
+
+.projects {
     list-style: none;
     margin: 0;
 
