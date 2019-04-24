@@ -1,0 +1,12 @@
+<h1>メンバー追加</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@project) do |f| %>
+    
+      <%= f.number_field :nember, class: 'form-control' %>
+
+      <%= f.submit "追加", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
