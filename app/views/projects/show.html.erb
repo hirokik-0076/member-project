@@ -14,13 +14,9 @@
         <%= @project.member %>
 
         <ul>
-          <% @projects.each do |project| %>
+          <% @project.members.each do |member| %>
             <li>
-              <label>
-                <% checked = project.members.exists?(@member.id) ? true : false %>
-                <%= f.check_box 'project_ids', { :name => 'member[project_ids][]', :checked => checked }, project.id, nil %>
-                <%= project.name %>
-              </label>
+              <%= member.name %>
             </li>
           <% end %>
         </ul>
