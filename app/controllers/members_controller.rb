@@ -19,6 +19,7 @@ class MembersController < ApplicationController
 
   def index
     @members = Member.all 
+    @members = Member.search(params[:search])
   end
 
   private
