@@ -19,7 +19,7 @@
               <%= member.name %>
             </li>
           <% end %>
-          <li><%= link_to "メンバー追加", edit_project_path %></li>
+          <li><%= link_to "メンバー追加", new_project_member_path(@project.id) %></li>
         </ul>
       </h1>
     </section>
