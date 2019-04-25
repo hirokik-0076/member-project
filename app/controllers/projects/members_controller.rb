@@ -6,13 +6,8 @@ class Projects::MembersController < ApplicationController
 
   def create
     @project = Project.find(params[:project_id])
-    
-    if @project.save
-      @project.members << Member.find(params[:member][:id])
-      flash[:success] = "Add Sun Asterisk Member"
-      redirect_to @project
-    else
-      render 'new'
-    end
+    @project.members << Member.find(params[:member][:id])
+    flash[:success] = "Add Sun Asterisk Member"
+    redirect_to @project
   end
 end
