@@ -89,3 +89,5 @@ group :production do
   #gem 'pg', '0.20.0'
   gem 'pg', '0.19.0'
 end
+
+gem 'seed-fu'
