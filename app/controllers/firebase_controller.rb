@@ -11,7 +11,7 @@ class FirebaseController < ApplicationController
       user = yield(decoded_token)
       log_in(user)
       flash[:success] = 'ログインしました。'
-      redirect_back_or(member_skill_home_path)
+      redirect_to member_skill_home_url
     else
       flash[:danger] = 'ログインできませんでした。'
       redirect_to login_url
