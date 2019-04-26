@@ -1,4 +1,4 @@
 class Member < ApplicationRecord
-  has_many :membersprojects
-  has_many :projects, through: :membersprojects
+  has_many :members_projects
+  has_many :projects, through: :members_projects
 end
