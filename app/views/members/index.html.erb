@@ -1,3 +1,10 @@
+ <%= form_tag members_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :keyword, params[:keyword] %>
+    <%= submit_tag "メンバー検索", :name => nil %>
+  </p>
+  <% end %>
+
 <h1>All Members</h1>
 
 <ul class="index">

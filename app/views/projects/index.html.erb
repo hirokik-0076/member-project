@@ -1,9 +1,17 @@
+ <%= form_tag projects_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :keyword, params[:keyword] %>
+    <%= submit_tag "PJ検索", :name => nil %>
+  </p>
+  <% end %>
+  
 <h1>All projects</h1>
 
 <ul class="index">
   <% @projects.each do |project| %>
     <li>
       <%= link_to project.name, project %>
+      <%= project.skill %>
     </li>
   <% end %>
 </ul>

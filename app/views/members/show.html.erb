@@ -3,16 +3,43 @@
   <aside class="col-md-4">
     <section class="member_info">
       <h1>
-        <%= @member.name %> 
-        <br>
-        <%= @member.profile %>
-        <br>
-        <%= @member.skill %>
-        <br>
-        <%= @member.project %>
-        <br>
-        <%= @member.coment %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          名前
+        </div>
+        <div class="panel-body">
+          <%= @member.name %>
+        </div>
+
+        <div class="panel-heading">
+          プロフィール
+        </div>
+        <div class="panel-body">
+          <%= @member.profile %>
+        </div>
+        
+        <div class="panel-heading">
+          スキル
+        </div>
+        <div class="panel-body">
+          <%= @member.skill %>
+        </div>
+        
+        <div class="panel-heading">
+          参加プロジェクト
+        </div>
+        <div class="panel-body">
+          <%= @member.project %>
+        </div>
+        
+        <div class="panel-heading">
+          コメント
+        </div>
+        <div class="panel-body">
+          <%= @member.coment %>
+        </div>
       </h1>
+      </div>
     </section>
   </aside>
 </div>
