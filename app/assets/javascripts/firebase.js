@@ -13,7 +13,7 @@
 // ----------------------------------------------------------------------------------------------------------------------------
 // Functions
 // ----------------------------------------------------------------------------------------------------------------------------
-const csrfTokenObj = () => {
+const csrfTokenObj2 = () => {
   return {
     "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
   };
@@ -27,7 +27,7 @@ const authorizationObj = (idToken) => {
 
 const railsLogin = (isNewUser, idToken) => {
   const url = isNewUser ? "/accounts" : "/login";
-  const headers = Object.assign(csrfTokenObj(), authorizationObj(idToken));
+  const headers = Object.assign(csrfTokenObj2(), authorizationObj(idToken));
   $.ajax({
       url: url,
       type: "POST",
@@ -45,7 +45,7 @@ const railsLogout = () => {
   $.ajax({
       url: "/logout",
       type: "DELETE",
-      headers: csrfTokenObj()
+      headers: csrfTokenObj2()
     })
     .done((data) => {
       console.log("Rails logout!")
@@ -59,7 +59,7 @@ const railsUserDelete = () => {
   $.ajax({
       url: '/accounts',
       type: "DELETE",
-      headers: csrfTokenObj()
+      headers: csrfTokenObj2()
     })
     .done((data) => {
       console.log("Rails user delete!")
