@@ -4,9 +4,9 @@ class Member < ApplicationRecord
 
   def self.search(keyword)
     if keyword
-      where('name LIKE ?', "%#{keyword}%")
+      where('skill LIKE ?', "%#{keyword}%")
     else
-      Member.all #全て表示。
+      Member.all
     end
   end
 end

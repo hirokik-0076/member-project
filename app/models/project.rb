@@ -4,9 +4,9 @@ class Project < ApplicationRecord
 
   def self.search(keyword) 
     if keyword 
-      where('name LIKE ?', "%#{keyword}%")
+      where('skill LIKE ?', "%#{keyword}%")
     else
-      Project.all #全て表示。
+      Project.all
     end
   end
 end

@@ -3,24 +3,45 @@
   <aside class="col-md-4">
     <section class="project_info">
       <h1>
-        <%= @project.name %> 
-        <br>
-        <%= @project.content %>
-        <br>
-        <%= @project.skill %>
-        <br>
-        <%= @project.status %>
-        <br>
-        <%= @project.member %>
-
-        <ul>
+      <h1>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          名前
+        </div>
+        <div class="panel-body">
+          <%= @project.name %>
+        </div>
+        <div class="panel-heading">
+          内容
+        </div>
+        <div class="panel-body">
+          <%= @project.content %>
+        </div>
+        <div class="panel-heading">
+          スキル
+        </div>
+        <div class="panel-body">
+          <%= @project.skill %>
+        </div>
+        <div class="panel-heading">
+          プロジェクトステータス
+        </div>
+        <div class="panel-body">
+          <%= @project.status %>
+        </div>
+        <div class="panel-heading">
+          参加メンバー
+        </div>
+        <div class="panel-body">
+          <ul>
           <% @project.members.each do |member| %>
             <li>
-              <%= member.name %>
+              <h4><%= member.name %></h4>
             </li>
           <% end %>
           <li><%= link_to "メンバー追加", new_project_member_path(@project) %></li>
         </ul>
+        </div>
       </h1>
     </section>
   </aside>
