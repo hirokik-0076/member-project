@@ -14,31 +14,59 @@
 // Functions
 // ----------------------------------------------------------------------------------------------------------------------------
 const csrfTokenObj = () => {
-  return { "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content') };
+  return {
+    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')
+  };
 }
 
 const authorizationObj = (idToken) => {
-  return { "Authorization": `Bearer ${idToken}` };
+  return {
+    "Authorization": `Bearer ${idToken}`
+  };
 }
 
 const railsLogin = (isNewUser, idToken) => {
   const url = isNewUser ? "/accounts" : "/login";
   const headers = Object.assign(csrfTokenObj(), authorizationObj(idToken));
-  $.ajax({url: url, type: "POST", headers: headers})
-    .done((data) => { console.log("Rails login!")      })
-    .fail((data) => { console.log("Rails login failed!") });
+  $.ajax({
+      url: url,
+      type: "POST",
+      headers: headers
+    })
+    .done((data) => {
+      console.log("Rails login!")
+    })
+    .fail((data) => {
+      console.log("Rails login failed!")
+    });
 }
 
 const railsLogout = () => {
-  $.ajax({url: "/logout", type: "DELETE", headers: csrfTokenObj()})
-    .done((data) => { console.log("Rails logout!")      })
-    .fail((data) => { console.log("Rails logout failed!") });
+  $.ajax({
+      url: "/logout",
+      type: "DELETE",
+      headers: csrfTokenObj()
+    })
+    .done((data) => {
+      console.log("Rails logout!")
+    })
+    .fail((data) => {
+      console.log("Rails logout failed!")
+    });
 }
 
 const railsUserDelete = () => {
-  $.ajax({url: '/accounts', type: "DELETE", headers: csrfTokenObj()})
-    .done((data) => { console.log("Rails user delete!")      })
-    .fail((data) => { console.log("Rails user delete failed!") });
+  $.ajax({
+      url: '/accounts',
+      type: "DELETE",
+      headers: csrfTokenObj()
+    })
+    .done((data) => {
+      console.log("Rails user delete!")
+    })
+    .fail((data) => {
+      console.log("Rails user delete failed!")
+    });
 }
 
 const firebaseLogin = () => {
@@ -47,11 +75,17 @@ const firebaseLogin = () => {
     callbacks: {
       signInSuccessWithAuthResult: (authResult, redirectUrl) => {
         authResult.user.getIdToken(true)
-          .then((idToken) => { railsLogin(authResult.additionalUserInfo.isNewUser, idToken) })
-          .catch((error)  => { console.log(`Firebase getIdToken failed!: ${error.message}`) });
+          .then((idToken) => {
+            railsLogin(authResult.additionalUserInfo.isNewUser, idToken)
+          })
+          .catch((error) => {
+            console.log(`Firebase getIdToken failed!: ${error.message}`)
+          });
         return false;
       },
-      uiShown: () => { document.getElementById('loader').style.display = 'none' }
+      uiShown: () => {
+        document.getElementById('loader').style.display = 'none'
+      }
     },
     signInFlow: 'redirect',
     signInOptions: [
@@ -64,14 +98,22 @@ const firebaseLogin = () => {
 
 const firebaseLogout = () => {
   firebase.auth().signOut()
-    .then(()       => { railsLogout() })
-    .catch((error) => { console.log(`Firebase logout failed!: ${error.message}`) });
+    .then(() => {
+      railsLogout()
+    })
+    .catch((error) => {
+      console.log(`Firebase logout failed!: ${error.message}`)
+    });
 }
 
 const firebaseUserDelete = () => {
   firebase.auth().currentUser.delete()
-    .then(()       => { railsUserDelete() })
-    .catch((error) => { console.log(`Firebase user delete failed!: ${error.message}`) });
+    .then(() => {
+      railsUserDelete()
+    })
+    .catch((error) => {
+      console.log(`Firebase user delete failed!: ${error.message}`)
+    });
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------
@@ -85,15 +127,19 @@ const decodeJwt = (token) => {
 
 const checkIdToken = () => {
   firebase.auth().currentUser.getIdToken(true)
-    .then((idToken) => { console.log(idToken) })
-    .catch((error)  => { console.log(`Firebase getIdToken failed!: ${error.message}`) });
+    .then((idToken) => {
+      console.log(idToken)
+    })
+    .catch((error) => {
+      console.log(`Firebase getIdToken failed!: ${error.message}`)
+    });
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------
 // Initialize Firebase
 // ----------------------------------------------------------------------------------------------------------------------------
 const config = {
-  apiKey:            "AIzaSyA7fYCzLoHJRuU1-nZeg0XPwK8yk4gN9To",
-  authDomain:        "test-bbc2f.firebaseapp.com",
+  apiKey: "AIzaSyBQc2ilCTbAN15nv6KgJckSEhsYHnpMW5w",
+  authDomain: "members-skill.firebaseapp.com",
 };
 firebase.initializeApp(config);
