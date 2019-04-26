@@ -139,7 +139,9 @@ const checkIdToken = () => {
 // Initialize Firebase
 // ----------------------------------------------------------------------------------------------------------------------------
 const config = {
+
   apiKey: "AIzaSyBQc2ilCTbAN15nv6KgJckSEhsYHnpMW5w",
   authDomain: "members-skill.firebaseapp.com",
+
 };
 firebase.initializeApp(config);
