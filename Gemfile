@@ -81,6 +81,8 @@ gem 'jwt'
 
 group:development do
   gem 'sqlite3', '~> 1.3.6'
+  gem 'pry-rails'
+  gem 'pry-doc'  
 end
 
 group :production do

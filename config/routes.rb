@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   post   '/accounts', to: 'accounts#create'
   delete '/accounts', to: 'accounts#destroy'
 
+  resources :projects do
+    resources :members, only: [:new, :create], controller: 'projects/members'
+  end
+
   resources :members
   resources :users
-  resources :projects
-
 end

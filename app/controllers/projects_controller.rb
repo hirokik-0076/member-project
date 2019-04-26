@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
        flash[:success] = "Welcome to Sun Asterisk Project"
       redirect_to @project
     else
+      flash[:success] = "Welcome to Sun Asterisk Project"
       render 'new'
     end
   end
